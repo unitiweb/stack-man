@@ -1,0 +1,9 @@
+stack:
+  paths:
+#    repos: ./.repos       # optional
+#    services: ./services  # optional
+  services: # This is an example of how to configure a stack
+#   gateway: # The service name
+#     repo: 'git@github.com:example/gateway.git',
+#     image: 'image.yml',
+#     build: 'build.yml'

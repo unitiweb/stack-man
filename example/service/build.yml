@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+  my-service:
+    build:
+      context: ./services/auth/repo
+      dockerfile: Dockerfile
+    volumes:
+      - ./services/auth/repo:/app
+    command: "npm run watch"

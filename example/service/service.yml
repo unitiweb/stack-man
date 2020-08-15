@@ -1,0 +1,18 @@
+version: "3.5"
+services:
+  auth:
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      NODE_ENV: development
+      PORT: "${PORT}"
+      HOST: 127.0.0.1
+      DB_HOST: "${MYSQL_HOST}"
+      DB_PORT: "${MYSQL_PORT}"
+      DB_USER: "${MYSQL_USER}"
+      DB_PASS: "${MYSQL_PASSWORD}"
+      DB_NAME: auth
+    depends_on:
+      - "${MYSQL_HOST}"
+    networks:
+      - overlay
